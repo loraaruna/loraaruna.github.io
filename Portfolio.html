@@ -1,0 +1,321 @@
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+    /* Reset and base styles */
+body {
+    font-family: "Lucida Console", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #d1f1f6, #6f9ee4);
+    color: #333;
+}
+
+/* Main container */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Section styling */
+.intro, .education, .skills, .projects {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.intro:hover, .education:hover, .skills:hover, .projects:hover {
+    transform: translateY(-5px);
+}
+
+/* Intro section */
+.intro {
+    text-align: center;
+}
+
+.intro p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.intro-background {
+    background-color: #e3f2fd; /* light blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.intro-background:hover {
+    transform: translateY(-5px);
+}
+
+.intro-background p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Education section */
+.education h2, .education h3 {
+    text-align: center;
+}
+
+.education img {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.education-background {
+    background-color: #e3f2fd; /* light blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.education-background:hover {
+    transform: translateY(-5px);
+}
+
+.education-background img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.education-background h3 {
+    margin-top: 10px;
+}
+
+
+/* Skills section */
+.skills h2, .skills h3 {
+    text-align: center;
+}
+
+.skills-background {
+    background-color: #e3f2fd; /* light blue */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.skills-background:hover {
+    transform: translateY(-5px);
+}
+
+
+.languages {
+    background-color: #ffffff; /* white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+
+.language-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.language-row > div {
+    text-align: center;
+    min-width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.language-row > div:hover {
+    transform: scale(1.1);
+}
+
+.language-row i,
+.language-row img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Projects section */
+.projects h2 {
+    text-align: center;
+}
+
+.project {
+    background-color: #e3f2fd; /* light blue */
+    padding: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.project:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.project a {
+    color: #004579;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #15202b;
+    color: white;
+}
+
+footer a {
+    color: #e9fcff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer i {
+    margin-right: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .language-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+}
+
+
+</style>
+
+    </head>
+    <body>
+        <main>
+            <section class="intro">
+                <div class="intro-background">
+                    <h1>Fatima Badat</h1>
+                    <p>I am a final year student that has completed all my academic modules under my Diploma.</p>
+                    <p>My goal is to leverage my skills in software development and to contribute to innovative projects.</p>
+                    <p>Currently, I am seeking opportunities to apply my knowledge in real-world scenarios and to further develop my expertise in the field of computer science.</p>
+                    <p>Feel free to explore my portfolio to see some of the skills I obtained during my studies.</p>  
+                </div>
+            </section>
+            <section class="education">
+                <h2>Education</h2>
+                <div class="education-background">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Tshwane_University_of_Technology_logo.svg/1024px-Tshwane_University_of_Technology_logo.svg.png" alt="Tshwane University of Technology Logo" style="width: 300px; height: auto;">
+                    <h3>Diploma in Computer Science</h3>
+                </div>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skills-background">
+                <h3>Programming Languages</h3>
+                <div class="languages">
+                    <div class="language-row">
+                    <div>
+                        <i class="fa-brands fa-java" style="font-size: 80px;"></i>
+                        <p>Java</p>
+                    </div>
+                    <div>
+                        <img src="https://www.svgrepo.com/show/473692/kotlin.svg" alt="Kotlin" style="width: 80px; height: 80px;">
+                        <p>Kotlin</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-html5" style="font-size: 80px;"></i>
+                        <p>HTML</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/29/29165.png" alt="SQL" style="width: 80px; height: 80px;">
+                        <p>SQL</p>
+                    </div>
+                    <div>
+                       <img src="https://www.webasha.com/uploads/course/images/65193c12841cd1696152594.pl-sql-Training-and-certification.jpg" alt="PL/SQL" style="width: 110px; height: 80px;">
+                        <p>PL/SQL</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Project 1: Java Application</h3>
+                    <p>A simple Java application that demonstrates basic programming concepts.</p>
+                    <a href="">View on GitHub</a> 
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>
+                <a href="mailto:fatimabadat22@outlook.com">
+                    <i class="fa-solid fa-envelope" style="font-size: 32px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></i>
+                </a>
+            </p>
+        </footer>
+
+
+    </body>
+</html>
