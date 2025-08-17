@@ -6,6 +6,8 @@ This is my personal portfolio website showcasing my education, skills, and proje
 
 🎨 Modern design with neon-inspired highlights
 
+📱 Responsive layout – adjusts for desktop, tablet, and mobile
+
 💻 Skills section with programming languages displayed as icons
 
 🖼 Education and Projects sections with hover effects
