@@ -204,66 +204,20 @@ footer a i:hover {
         padding: 1rem;
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1.1rem;
-    }
-
     .intro p {
         font-size: 0.9rem;
         line-height: 1.4;
     }
 
-    .education img {
-        max-width: 150px;
+    h1 {
+        font-size: 1.8rem;
     }
 
-    /* Horizontal scroll for skills */
-    .language-row {
-        display: flex;
-        overflow-x: auto;
-        gap: 1rem;
-        padding: 1rem 0;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .language-row > div {
-        flex: 0 0 auto;
-        scroll-snap-align: center;
-        width: 120px;
-    }
-
-    /* Arrows */
-    .skills-background {
-        position: relative;
-    }
-
-    .scroll-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    h1 {
         font-size: 2rem;
-        color: #64ffda;
-        cursor: pointer;
-        padding: 0.5rem;
-        background: rgba(10,25,47,0.7);
-        border-radius: 50%;
-        user-select: none;
     }
 
-    .scroll-arrow.left {
-        left: 5px;
+    h2 {
+        font-size: 1.5rem;
     }
 
-    .scroll-arrow.right {
-        right: 5px;
-    }
-}
