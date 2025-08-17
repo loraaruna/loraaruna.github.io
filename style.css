@@ -192,6 +192,12 @@ footer i {
     margin-right: 0.5rem;
 }
 
+footer a i:hover {
+    color: #64ffda; /* neon accent */
+    text-shadow: 0 0 8px #64ffda;
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     main {
