@@ -1,27 +1,30 @@
-/* Reset and base styles */
+/* Base styles */
 body {
-    font-family: "Lucida Console", Courier, monospace;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #d1f1f6, #6f9ee4);
-    color: #333;
+    background: #0a192f;
+    color: #ccd6f6;
 }
 
 /* Main container */
 main {
-    max-width: 90vw;
+    max-width: 1000px;
     margin: auto;
     padding: 2rem;
 }
 
 /* Headings */
 h1, h2, h3 {
-    color: #2c3e50;
+    font-family: "Share Tech Mono", monospace;
+    color: #64ffda;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.7);
     margin-bottom: 1rem;
 }
 
 h1 {
     font-size: 2.5rem;
+    text-align: center;
 }
 
 h2 {
@@ -35,16 +38,17 @@ h3 {
 
 /* Section styling */
 .intro, .education, .skills, .projects {
-    background-color: #ffffff;
+    background-color: #112240;
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border: 1px solid #233554;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .intro:hover, .education:hover, .skills:hover, .projects:hover {
     transform: translateY(-0.3rem);
+    box-shadow: 0 0 20px rgba(100,255,218,0.2);
 }
 
 /* Intro section */
@@ -55,27 +59,21 @@ h3 {
 .intro p {
     line-height: 1.5;
     margin-bottom: 1rem;
+    color: #8892b0;
 }
 
-.intro-background {
-    background-color: #e3f2fd;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
+/* Blinking cursor effect */
+h1::after {
+    content: "_";
+    animation: blink 1s infinite;
+    color: #64ffda;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
-.intro-background:hover {
-    transform: translateY(-0.3rem);
-}
-
-.intro-background p {
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-/* Education section */
+/* Education */
 .education h2, .education h3 {
     text-align: center;
 }
@@ -83,123 +81,111 @@ h3 {
 .education img {
     display: block;
     margin: 0 auto 1rem;
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: 0.5rem;
+    background: #0a192f;
+    padding: 0.5rem;
 }
 
-.education-background {
-    background-color: #e3f2fd;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.education-background:hover {
-    transform: translateY(-0.3rem);
-}
-
-.education-background h3 {
-    margin-top: 1rem;
-}
-
-/* Skills section */
+/* Skills */
 .skills h2, .skills h3 {
     text-align: center;
 }
 
 .skills-background {
-    background-color: #e3f2fd;
+    background-color: #0a192f;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
+    box-shadow: 0 0 15px rgba(100,255,218,0.1);
     margin-top: 2rem;
 }
 
-.skills-background:hover {
-    transform: translateY(-0.3rem);
-}
-
+/* Container for languages */
 .languages {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.05);
     margin-top: 2rem;
 }
 
+/* Row of languages (desktop) */
 .language-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
+    flex-wrap: wrap; /* allows wrapping */
 }
 
+/* Each language box */
 .language-row > div {
+    background: #112240;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    min-width: 8rem;
-    transition: transform 0.3s ease;
+    width: 120px;
+    flex-shrink: 0;
 }
 
 .language-row > div:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(100,255,218,0.5);
 }
 
 .language-row i,
 .language-row img {
     display: block;
     margin: 0 auto 0.5rem;
-    max-width: 100%;
+    max-width: 80px;
     height: auto;
 }
 
-/* Projects section */
+/* Projects */
 .projects h2 {
     text-align: center;
 }
 
 .project {
-    background-color: #e3f2fd;
+    background-color: #112240;
     padding: 1.5rem;
     border-radius: 0.75rem;
-    transition: box-shadow 0.3s ease;
+    border: 1px solid #233554;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
 }
 
 .project:hover {
-    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(100,255,218,0.3);
 }
 
 .project a {
-    color: #004579;
+    color: #64ffda;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    color: #00fff5;
+    text-shadow: 0 0 8px #00fff5;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #15202b;
-    color: white;
+    background-color: #020c1b;
+    color: #8892b0;
 }
 
 footer a {
-    color: #e9fcff;
+    color: #64ffda;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #00fff5;
+    text-shadow: 0 0 6px #00fff5;
 }
 
 footer i {
@@ -208,9 +194,8 @@ footer i {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .language-row {
-        flex-direction: column;
-        align-items: center;
+    main {
+        padding: 1rem;
     }
 
     h1 {
@@ -221,17 +206,4 @@ footer i {
         font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    .intro-background,
-    .education-background,
-    .skills-background {
-        padding: 1.5rem;
-    }
-}
+    h
